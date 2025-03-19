@@ -1,0 +1,334 @@
+/** Style: General **/
+.tvia--main h1 { 
+  font-size: 5.2rem;
+  line-height: 1em;
+  text-align: center; 
+}
+
+.tvia--main h2 { font-size: 4rem; }
+.tvia--main h3 { font-size: 3rem; }
+
+.tvia--main .tvia--btn {
+  padding: 10px 32px;
+  font-size: 2.4rem;
+}
+
+.tvia-grid {
+  flex-direction: column;
+}
+
+/** Style: header **/
+.tvia--main header {
+  padding: 48px 5% 60px;
+	background-color: black;
+  /** background: no-repeat center/cover url(../images/tvia-hero-mobile.jpg); **/
+}
+
+.tvia--main header .tvia-container {
+  flex-direction: column;
+  gap: 48px;
+}
+
+.tvia--main header .tvia--logo {
+  max-width: 160px;
+}
+
+.tvia--main header h1 span {
+  font-size: 4.6rem;
+}
+
+.tvia--main header .tvia--btn {
+  margin: 24px 0 0;
+  padding: 4px 20px;
+  display: block;
+  font-size: 2rem;
+}
+
+.tvia--main header .tvia-container > div:first-child {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/** Style: Section Characteristics **/
+.tvia-characteristics {
+  padding: 0 5% 150px;
+}
+
+.tvia-characteristics .tvia-interest {
+  flex-direction: column;
+}
+
+.tvia-solutions .tvia-interest .tvia--btn,
+.tvia-characteristics .tvia-grid .grid--item:not(.grid--item:last-child)::after {
+  display: none;
+}
+
+.tvia-characteristics .tvia-interest img {
+  max-width: 200px;
+}
+
+.tvia-characteristics .tvia-grid {
+  margin-top: 0;
+  flex-direction: column-reverse;
+  gap: 40px;
+  position: relative;
+}
+
+.tvia-characteristics .tvia-grid::before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+}
+
+.tvia-characteristics .tvia-grid .grid--item {
+  padding: 20px 0;
+  background-color: var(--white);
+}
+
+.tvia-characteristics .tvia-grid .grid--item:last-child {
+  padding-top: 0;
+}
+
+/** Style: Section Services **/
+.tvia-services {
+  padding-bottom: 60px;
+}
+
+.tvia-services .tvia-grid {
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.tvia-services .tvia-grid .grid--item:not(:first-child) {
+  margin-top: 0;
+}
+
+.tvia-services .tvia-grid img {
+  display: none;
+}
+
+.tvia-services .tvia-grid img.tvia--image-mobile,
+.tvia-services .tvia-grid .grid--item:first-child img {
+  max-width: 212px;
+  display: block;
+}
+
+.tvia-services .tvia-grid .grid--title {
+  margin: 8px 0 12px;
+}
+
+.tvia-services .tvia-grid--payment {
+  padding-bottom: 24px;
+  flex-direction: column;
+  border-radius: 28px;
+}
+
+.tvia-services .tvia-grid--payment .grid--item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tvia-services .tvia-grid--payment .tvia--bullet {
+  padding: 4px 24px;
+  border-radius: 8px;
+}
+
+.tvia-services .tvia-grid--payment .grid--item:not(:first-child) .tvia--bullet {
+  margin: 0 0 12px;
+}
+
+/** Style: Section Solutions **/
+.tvia-solutions {
+  padding: 60px 0;
+}
+
+.tvia-solutions .tvia-banner .tvia-container {
+  flex-direction: column;
+}
+
+.tvia-solutions h2 {
+  color: var(--black);
+  line-height: 1.1em;
+}
+
+.tvia-solutions .tvia-container > p {
+  margin-bottom: 48px;
+  font-family: var(--fontMontserrat);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.2em;
+}
+
+.tvia-solutions .tvia-container > p strong {
+  font-weight: 400;
+}
+
+.tvia-solutions .tvia-banner,
+.tvia-characteristics .tvia-line {
+  display: none;
+}
+
+.tvia-solutions .grid-options .tvia--bullet,
+.tvia-solutions .grid-options .grid--item:last-child .tvia--bullet {
+  right: 0;
+  left: 0;
+  font-size: 2.6rem;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.tvia-solutions .grid-options {
+  gap: 60px;
+}
+
+.tvia-solutions .grid-options .grid--item {
+  border-radius: 24px;
+}
+
+.tvia-solutions .tvia-banner-mobile,
+.tvia-solutions .tvia-tag--title {
+  display: block;
+}
+
+.tvia-solutions .tvia-interest {
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+/** Style: Section DriveTag **/
+.tvia-drive {
+  padding-top: 0;
+}
+
+.tvia-drive .drive--text-big {
+  margin-top: 60px;
+  font-weight: 700;
+  font-size: 4.4rem;
+  text-transform: uppercase;
+}
+
+.tvia-drive h2 {
+  font-family: var(--fontMontserrat);
+  font-weight: 400;
+  font-size: 2.8rem;
+  color: var(--primary);
+  line-height: 1.2em;
+  text-transform: initial;
+}
+
+.tvia-drive .tvia-banner {
+  margin: 32px 0 48px;
+}
+
+.tvia-drive .tvia-banner img:first-child {
+  max-width: 160px;
+  margin-bottom: 16px;
+}
+
+.tvia-drive .tvia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.tvia-drive .tvia-grid .grid--item:nth-child(2) img {
+  width: 76px;
+}
+
+.tvia-drive .tvia-line,
+.tvia-drive .tvia-grid .grid--item:first-child::after,
+.tvia-drive .tvia-grid .grid--item:last-child::after {
+  display: none;
+}
+
+.tvia-drive .tvia-grid .grid--item:nth-child(2n+1)::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 42px;
+  right: -60%;
+  background-color: var(--text);
+  z-index: -1;
+}
+
+.tvia-drive .tvia-grid .grid--title {
+  font-family: var(--fontMontserrat);
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2em;
+}
+
+.tvia-drive .tvia-grid img {
+  margin-bottom: 12px;
+  padding: 0 8px;
+}
+
+.tvia-drive .tvia--btn.btn-dark {
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+.tvia-drive .video-container {
+  margin-bottom: 80px;
+}
+
+
+/** Style: Section Testimonials **/
+.tvia-testimonials {
+  margin-top: 100px;
+}
+
+.tvia-testimonials .tvia-grid {
+  margin-bottom: 0;
+}
+
+
+/* Section: popup */
+.tvia-popup {
+  padding: 12px 5%;
+  overflow-y: scroll;
+}
+
+.tvia-popup .tvia-popup--container {
+  padding: 48px 20px 28px;
+}
+
+.tvia-popup fieldset {
+  flex-direction: column;
+}
+
+.tvia-popup .tvia-close-popup {
+  width: 20px;
+  height: 20px;
+}
+
+.tvia-popup .tvia-close-popup::after, 
+.tvia-popup .tvia-close-popup::before {
+  height: 22px;
+}
+
+.tvia-popup button {
+  max-width: 120px;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+}
+
+/** Style: Section DriveTag **/
+.tvia--main footer .tvia-container {
+  justify-content: center;
+}
+
+.tvia--main footer .tvia-container img {
+  max-width: 185px;
+  margin-top: -18px;
+}
