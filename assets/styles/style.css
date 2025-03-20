@@ -242,16 +242,19 @@ html .tvia--main {
 
 .tvia-container {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto 0;
+  max-width: 750px;
+  margin: 20px auto 0;
+  align-items: center;
 }
 
 .tvia--btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center; /* Asegura que el contenido esté centrado */
   gap: 10px;
-  max-height: inherit;
-  padding: 10px 10px 10px 10px;
+  width: 120px; /* Ajusta el ancho según tus necesidades */
+  height: 40px; /* Ajusta el alto según tus necesidades */
+  padding: 10px;
   font-family: var(--fontSairaCondensed);
   font-size: 1.8rem;
   font-weight: 500;
@@ -267,13 +270,36 @@ html .tvia--main {
   cursor: pointer;
   margin-left: 10px; /* Espacio entre los botones */
   margin-right: 10px;
+  flex-wrap: nowrap; /* Evita que el contenido se ponga uno debajo del otro */
 }
 
 .tvia--btn img {
-  flex-shrink: 0px; /* Evita que la imagen se reduzca */
+  flex-shrink: 0; /* Evita que la imagen se reduzca */
   height: 15px; /* Asegura que todas las imágenes tengan el mismo tamaño */
 }
 
+.tvia--btn span {
+  flex: 1; /* Permite que el texto ocupe el espacio disponible */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+	justify-content: center; /* Asegura que el contenido esté centrado */
+}
+
+/* Media query para pantallas móviles */
+@media (max-width: 600px) {
+  .tvia--btn {
+	  display: inline-flex;
+    width: 145px; /* Ajusta el ancho para pantallas móviles */
+    height: 40px; /* Ajusta el alto para pantallas móviles */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente para pantallas móviles */
+    flex-direction: row; /* Mantiene la imagen y el texto en línea horizontal */
+	  text-align: center;
+	  justify-content: center; /* Asegura que el contenido esté centrado */
+  }
+
+  .tvia--btn img {
+    height: 15px; /* Ajusta el tamaño de la imagen para pantallas móviles */
+  }
+}
 
 .tvia--btn:hover, .tvia--btn.btn-dark {
   color: var(--primary);
@@ -294,10 +320,13 @@ html .tvia--main {
 }
 
 .tvia--main .tvia--btn.btn--small {
-  padding: 10px 10px ;
+  padding: 20px 10px ;
   font-size: 1.5rem;
 	align-items: center;
 	align-self: center;
+	 display: inline-flex;
+  justify-content: center; /* Asegura que el contenido esté centrado */
+  gap: 10px;
 }
 
 .tvia-grid {
@@ -306,7 +335,7 @@ html .tvia--main {
 }
 
 .tvia-grid .grid--item {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -497,7 +526,7 @@ html .tvia--main {
 }
 
 .tvia-solutions .tvia-container > p {
-  max-width: 940px;
+  max-width: 800px;
   margin: 0 auto;
   font-family: var(--fontSairaExtra);
   font-weight: 600;
@@ -507,7 +536,7 @@ html .tvia--main {
 
 .tvia-solutions .tvia-banner {
   margin: 30px 0 30px;
-  padding: 50px 5% 120px;
+  padding: 50px 5% 100px;
   background: no-repeat center/cover url(../images/banner-booth.jpg);
 }
 
@@ -548,14 +577,14 @@ html .tvia--main {
 
 .tvia-solutions .grid-options .tvia--bullet {
   width: 100%;
-  max-width: 200px;
+  max-width: 250px;
   margin: -20px 0 0px;
   position: relative;
   font-size: 2.1rem;
 }
 
 .tvia-solutions .grid-options .grid--item:last-child .tvia--bullet {
-  left: 0%;
+  left:auto;
 }
 
 .tvia-solutions .tvia-tag--title {
@@ -588,7 +617,7 @@ html .tvia--main {
   flex-direction: column;
   align-items: center;
   flex: 1;
-  gap: 16px;
+  gap: 10px;
 }
 
 
@@ -648,7 +677,7 @@ html .tvia--main {
 }
 
 .tvia-drive .tvia-grid .grid--title {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: var(--text);
   line-height: 1.1em;
@@ -666,7 +695,7 @@ html .tvia--main {
 .tvia-characteristics .tvia-grid .grid--item:last-child::after {
   content: '';
   display: inline-block;
-  width: 80%;
+  width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -722,7 +751,7 @@ html .tvia--main {
 
 /** Style: Section Footer **/
 .tvia--main footer {
-  padding: 0 5% 42px;
+  padding: 0 5% 30px;
   background-color: var(--blacktext);
 }
 
@@ -842,19 +871,19 @@ html .tvia--main {
   outline: 0;
 }
 
-.tvia-popup button {
-  width: 100%;
-  max-width: 200px;
-  margin: 20px auto 0;
-  padding: 14px 20px;
-  display: block;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--white);
-  background-color: var(--primary);
-  border: 0;
-  cursor: pointer;
-}
+  .tvia-popup button {
+    width: 80%; /* Asegura que el botón ocupe el ancho completo */
+    max-width: 200px; /* Mantiene el ancho máximo */
+    margin: 20px auto 0; /* Centra el botón */
+    padding: 10px 20px; /* Ajusta el padding */
+    display: block; /* Mantiene el botón como bloque */
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+    font-weight: 600; /* Mantiene el peso de la fuente */
+    color: var(--white); /* Mantiene el color del texto */
+    background-color: var(--primary); /* Mantiene el color de fondo */
+    border: 0; /* Mantiene el borde */
+    cursor: pointer; /* Mantiene el cursor */
+  }
 
 .tvia-popup .tvia-close-popup {
   width: 30px;
@@ -943,6 +972,6 @@ html .tvia--main {
   }
 
   .tvia-drive .tvia-grid .grid--title {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
